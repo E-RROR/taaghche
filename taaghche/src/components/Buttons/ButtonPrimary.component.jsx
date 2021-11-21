@@ -4,8 +4,8 @@ function ButtonPrimary({
 }) {
   return (
     <div className="buttons">
-      <button className="btn btn-primary" onClick={props.onClick}>
-        {props.text}
+      <button className="btn btn-primary" onClick={onClick}>
+        {text}
       </button>
     </div>
   );

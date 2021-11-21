@@ -5,11 +5,18 @@ import {Texts} from "../components/PrizeTexts/Texts.component";
 import {Image} from "../components/Image/Image.component";
 // import {Buttons} from "../components/Buttons/Buttons.component";
 import {BottomSheet} from "../components/Sheet/BottomSheet.component";
+import { Modal } from "../components/Modal/Modal.component";
+import { useSelector } from 'react-redux';
 
 export function Prize() {
+
+    const leafs = useSelector((state) => state.leafs.value);
+
     return (
         <>
+            <Modal />
             <Header />
+            <p>{leafs}</p>
             <Container>
                 <Spliter
                     right={(

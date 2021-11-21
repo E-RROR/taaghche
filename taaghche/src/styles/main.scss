@@ -40,6 +40,9 @@ body {
 .mt5 {
     margin-top: 20px;
 }
+.mr5 {
+    margin-right: 20px;
+}
 @media only screen and (max-width: 700px) {
     .container {
         max-width: 90vw !important;
@@ -126,6 +129,7 @@ $container_height_time: 7vh;
 }
 .col {
     padding: 1px;
+    align-items: center;
 }
 .col li {
     font-size: 14px;
@@ -140,7 +144,7 @@ $container_height_time: 7vh;
 
 /** Buttons */
 .btn-disabled {
-    background-color: $text;
+    background-color: rgb(145, 145, 145);
     border-radius: 26px;
     padding: 10px;
     max-width: 170px;
@@ -150,13 +154,34 @@ $container_height_time: 7vh;
     font-family: iranyekan,Tahoma;
     -webkit-transition: all .1s linear;
     transition: all .1s linear;
+    font-size: 10px !important;
+    width: 100%;
+    margin-top: 8px;
+}
+.btn-arrow {
+    border-radius: 26px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    color: #00a2a4;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+    border: none;
+    font-family: iranyekan,Tahoma;
+    transition: all .1s linear;
+    width: 100%;
+}
+.btn-arrow img {
+    position: absolute;
+    margin-right: 3px;
+    margin-top: 7px;
 }
 
 
 /** Bottom sheet */
 .bottom__sheet {
     background-color: #fff;
-    width: 101%;
+    width: 100%;
     height: 56px;
     position: fixed;
     bottom: -1px;
@@ -166,4 +191,57 @@ $container_height_time: 7vh;
     display: flex;
     -webkit-box-shadow: 0 -4px 8px 0 rgba(32,32,32,.16);
     box-shadow: 0 -4px 8px 0 rgba(32,32,32,.16);
+}
+
+
+/** Modal */
+.modal__container {
+    position: fixed;
+    background-color: #727272;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+}
+.modal__body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 95vw;
+    height: 35vh;
+    border-radius: 30px;
+}
+
+
+/** Cards */
+.card__container {
+    width: 95%;
+    height: 210px;
+    margin: 8px auto;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px 0 rgba(32,32,32,.16);
+}
+.card__img {
+    cursor: pointer;
+    border-radius: 0px 0px 0px 0px;
+    overflow: hidden;
+    width: 100% !important;
+    height: 75%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.card__img__dots {
+    width: 100% !important;
+    height: 5px;
+    object-fit: cover;
+    background-repeat: repeat;
+    background-size: cover;
+    margin-top: -4px;
 }
