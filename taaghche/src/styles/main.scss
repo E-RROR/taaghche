@@ -50,9 +50,8 @@ body {
 }
 
 
-/** Leaf Layout */
+/** Leaf */
 $container_height_time: 7vh;
-
 .time__bg {
     @extend %secondary_background;
     height: $container_height_time;
@@ -94,6 +93,19 @@ $container_height_time: 7vh;
     font-size: 23px;
     @extend %custom_font;
 }
+.leafs__container {
+    width: 100%;
+    margin: auto !important;
+    color: $primary;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 30px !important;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+
 
 /** Prize */
 .header {
@@ -128,7 +140,7 @@ $container_height_time: 7vh;
     grid-template-columns: 50% 50%;
 }
 .col {
-    padding: 1px;
+    justify-content: center;
     align-items: center;
 }
 .col li {
@@ -209,14 +221,25 @@ $container_height_time: 7vh;
     transform: translate(-50%, -50%);
     background-color: white;
     width: 95vw;
-    height: 35vh;
+    max-width: 900px;
+    height: 40vh;
     border-radius: 30px;
 }
 
 
 /** Cards */
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    padding: 15px;
+    flex-wrap: wrap;
+    flex-basis: 33.333333% !important;
+    gap: 30px;
+};
 .card__container {
     width: 95%;
+    max-width: 400px;
     height: 210px;
     margin: 8px auto;
     overflow: hidden;

@@ -7,6 +7,7 @@ import {Image} from "../components/Image/Image.component";
 import {BottomSheet} from "../components/Sheet/BottomSheet.component";
 import { Modal } from "../components/Modal/Modal.component";
 import { useSelector } from 'react-redux';
+import {Card} from "../components/Cards/Card.component";
 
 export function Prize() {
 
@@ -14,9 +15,15 @@ export function Prize() {
 
     return (
         <>
-            <Modal />
+            <Modal display>
+                <Spliter
+                    right={<p>تبریک</p>}
+                    left={<Card />}
+                />
+            </Modal>
+
             <Header />
-            <p>{leafs}</p>
+
             <Container>
                 <Spliter
                     right={(
@@ -30,6 +37,7 @@ export function Prize() {
                     mobileOne
                 />
             </Container>
+
             <BottomSheet />
         </>
     )

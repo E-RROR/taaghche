@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const leafs = createSlice({
   name: 'leafs',
   initialState: {
-    value: 0,
+    value: 300,
   },
   reducers: {
     increment: (state) => {
