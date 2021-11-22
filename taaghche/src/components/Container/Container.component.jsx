@@ -1,7 +1,9 @@
-export function Container(props) {
+export function Container({
+  children
+}) {
   return (
     <div className="container">
-        {props.children}
+        {children}
     </div>
   );
 };
